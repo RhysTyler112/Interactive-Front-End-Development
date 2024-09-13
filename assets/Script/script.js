@@ -59,3 +59,8 @@ function getRandomCard(){
 function displayCard(card){
     cardDisplay.textContent = card.rank + card.suit;
 }
+
+// Function to format the card for displaying in messages
+function formatCard(card){
+    return card.rank + card.suit;
+}
