@@ -43,3 +43,14 @@ function guess(choice){
     displayCard(currentCard);
     scoreDisplay.textContent = score
 }
+
+// Function to get a random card
+function getRandomCard(){
+    const suit = suits[Math.floor(Math.random() * ranks.length)];
+
+    const rank = ranks[Math.floor(Math.random() * ranks.length)];
+
+    const value = ranks.indexOf(rank) + 2;
+    
+    return {suit: suits, rank: ranks, value: value}
+}
