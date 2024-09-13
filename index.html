@@ -9,16 +9,17 @@
 <body>
     <div class="game-area">
         <h1>Higher or Lower</h1>
-        <div id="display-card">Card:<span></span></div>
+        <div id="display-card">Card:<span id="current-card"></span></div>
         <div class="buttons">
-            <button>Higher</button>
-            <button>Lower</button>
+            <button id="btn-higher">Higher</button>
+            <button id="btn-lower">Lower</button>
         </div>
         <div>
             <div id="message">Confirmation messge</div>
-            <div id="score">Score</div>
+            <div id="score">Score: <span id="current-score"></span></div>
         </div>
     </div>
+    
     <script src="assets/Script/script.js"></script>
 </body>
 </html>
