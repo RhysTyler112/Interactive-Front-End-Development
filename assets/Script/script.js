@@ -51,6 +51,11 @@ function getRandomCard(){
     const rank = ranks[Math.floor(Math.random() * ranks.length)];
 
     const value = ranks.indexOf(rank) + 2;
-    
+
     return {suit: suits, rank: ranks, value: value}
+}
+
+// Function to display the current card
+function displayCard(card){
+    cardDisplay.textContent = card.rank + card.suit;
 }
