@@ -11,20 +11,22 @@ let currentCard = getRandomCard();
 // Select the HTML elements we want to update or interact with
 const cardDisplay = document.getElementById('current-card');
 const messageDisplay = document.getElementById('message');
-const btnHigher = document.getElementById('btn-higher');
-const btnLower = document.getElementById('btn-lower');
+const scoreDisplay = document.getElementById('current-score');
+const higherBtn = document.getElementById('btn-higher');     
+const lowerBtn = document.getElementById('btn-lower');       
 
 // Display the current card at the start
 displayCard(currentCard);
 
 // Add event listeners to the buttons depending if higher or lower button is clicked
-btnHigher.addEventListener('click', function(){
-    guess('higher')
-})
+higherBtn.addEventListener('click', function() {
+  guess('higher');
+});
 
-btnLower.addEventListener('click', function(){
-    guess('lower')
-})
+// When "Lower" is clicked, run the guess function with 'lower'
+lowerBtn.addEventListener('click', function() {
+  guess('lower');
+});
 
 // Function to handle the guess
 function guess(choice){
@@ -41,26 +43,28 @@ function guess(choice){
     currentCard = nextCard
 
     displayCard(currentCard);
-    scoreDisplay.textContent = score
+    scoreDisplay.textContent = score;
 }
 
+
 // Function to get a random card
-function getRandomCard(){
-    const suit = suits[Math.floor(Math.random() * ranks.length)];
+function getRandomCard() {
+  
+  const suit = suits[Math.floor(Math.random() * suits.length)];
 
-    const rank = ranks[Math.floor(Math.random() * ranks.length)];
+  const rank = ranks[Math.floor(Math.random() * ranks.length)];
 
-    const value = ranks.indexOf(rank) + 2;
+  const value = ranks.indexOf(rank) + 2;
 
-    return {suit: suits, rank: ranks, value: value}
+  return { suit: suit, rank: rank, value: value };
 }
 
 // Function to display the current card
-function displayCard(card){
-    cardDisplay.textContent = card.rank + card.suit;
+function displayCard(card) {
+  cardDisplay.textContent = card.rank + card.suit;
 }
 
 // Function to format the card for displaying in messages
-function formatCard(card){
-    return card.rank + card.suit;
+function formatCard(card) {
+  return card.rank + card.suit;
 }
