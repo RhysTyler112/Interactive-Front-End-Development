@@ -25,3 +25,21 @@ btnHigher.addEventListener('click', function(){
 btnLower.addEventListener('click', function(){
     guess('lower')
 })
+
+// Function to handle the guess
+function guess(choice){
+    const nextCard = getRandomCard();
+
+    if ((choice === 'higher' && nextCard.value > currentCard.value) ||
+        (choice === 'lower' && nextCard.value > currentCard.value)) {
+            score++;
+            messageDisplay.textContent = "Correct! The next card was " + formatCard(nextCard);
+        }else {
+            messageDisplay.textContent = "Wrong! The next card was " + formatCard(nextCard);
+        }
+
+    currentCard = nextCard
+
+    displayCard(currentCard);
+    scoreDisplay.textContent = score
+}
