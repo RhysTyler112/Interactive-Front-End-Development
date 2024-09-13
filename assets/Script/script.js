@@ -33,8 +33,8 @@ function guess(choice){
     const nextCard = getRandomCard();
 
     if ((choice === 'higher' && nextCard.value > currentCard.value) ||
-        (choice === 'lower' && nextCard.value > currentCard.value)) {
-            score++;
+        (choice === 'lower' && nextCard.value < currentCard.value)) {
+        score++;
             messageDisplay.textContent = "Correct! The next card was " + formatCard(nextCard);
         }else {
             messageDisplay.textContent = "Wrong! The next card was " + formatCard(nextCard);
@@ -54,8 +54,20 @@ function getRandomCard() {
 
   const rank = ranks[Math.floor(Math.random() * ranks.length)];
 
-  const value = ranks.indexOf(rank) + 2;
+  let value;
 
+  if (rank === 'J') {
+    value = 11;
+  } else if (rank === 'Q') {
+    value =12;
+  }else if (rank === 'K') {
+    value =13;
+  }else if (rank === 'A') {
+    value =14;
+  }else {
+    value = parseInt(rank);
+  }
+  
   return { suit: suit, rank: rank, value: value };
 }
 
