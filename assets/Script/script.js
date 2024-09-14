@@ -13,7 +13,8 @@ const cardDisplay = document.getElementById('current-card');
 const messageDisplay = document.getElementById('message');
 const scoreDisplay = document.getElementById('current-score');
 const higherBtn = document.getElementById('btn-higher');     
-const lowerBtn = document.getElementById('btn-lower');       
+const lowerBtn = document.getElementById('btn-lower'); 
+const resetBtn = document.getElementById('reset-btn');      
 
 // Display the current card at the start
 displayCard(currentCard);
@@ -27,6 +28,8 @@ higherBtn.addEventListener('click', function() {
 lowerBtn.addEventListener('click', function() {
   guess('lower');
 });
+
+resetBtn.addEventListener('click', resetGame);
 
 // Function to handle the guess
 function guess(choice){
@@ -86,3 +89,14 @@ function updateScore() {
   scoreDisplay.textContent = score;
 }
 
+// Function to reset the game
+function resetGame() {
+  score = 0;
+
+  currentCard = getRandomCard();
+
+  messageDisplay.textContent = "";
+
+  displayCard(currentCard);
+  updateScore();
+}
