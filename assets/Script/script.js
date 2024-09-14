@@ -49,7 +49,6 @@ function guess(choice){
     updateScore();
 }
 
-
 // Function to get a random card
 function getRandomCard() {
   

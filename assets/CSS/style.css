@@ -59,7 +59,7 @@ h1 {
 }
 
 #display-card {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -86,3 +86,39 @@ button {
 }
 
 /* -------------------------------Media Queries */
+@media only screen and (min-width: 1440px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+    /*----------Nav Bar*/
+    .title {
+        font-size: 23px;
+    }
+    /*----------------The game*/ 
+    .game-area {
+        width: 550px;
+    }
+    h1 {
+        font-size:  35px;
+    }
+    #display-card {
+        font-size: 40px;
+
+    }
+    #message {
+        font-size: 25px;
+        
+    }
+    #score{
+        font-size: 25px;
+    }
+    .game-area button {
+        width: 40%;
+        font-size: 20px;
+    }
+    .container .btn {
+        width: 40%;
+        font-size: 20px;
+    }
+}
