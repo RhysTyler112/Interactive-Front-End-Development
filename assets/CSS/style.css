@@ -3,8 +3,10 @@ body {
     text-align: center;
     background-color: #202020;
     margin: 0;
+    height: 100%;
+    margin: 0;
 }
-
+/*---------------------------------------------Nav Bar*/
 .top-bar {
     display: flex;
     flex-direction: row;
@@ -31,7 +33,16 @@ body {
     padding: 0;
 }
 
-
+/*---------------------------------------------The game*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
 .game-area {
     margin: 25px ;
     padding: 20px;
@@ -73,3 +84,5 @@ button {
 #score{
     font-size: 18px;
 }
+
+/* -------------------------------Media Queries */
