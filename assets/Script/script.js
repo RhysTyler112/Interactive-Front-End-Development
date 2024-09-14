@@ -43,7 +43,7 @@ function guess(choice){
     currentCard = nextCard
 
     displayCard(currentCard);
-    scoreDisplay.textContent = score;
+    updateScore();
 }
 
 
@@ -80,3 +80,9 @@ function displayCard(card) {
 function formatCard(card) {
   return card.rank + card.suit;
 }
+
+// Function to update the score display
+function updateScore() {
+  scoreDisplay.textContent = score;
+}
+
