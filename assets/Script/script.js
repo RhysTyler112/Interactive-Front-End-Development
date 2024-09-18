@@ -48,20 +48,15 @@ function initializeDeck() {
   }
 }
 
-// Function to get the value of a card's rank
-function getValue(rank) {
-  switch (rank) {
-    case 'J':
-      return 11;
-    case 'Q':
-      return 12;
-    case 'K':
-      return 13;
-    case 'A':
-      return 14;
-    default:
-      return parseInt(rank);
+// Function to get a random card from the deck
+function getRandomCard() {
+  if (deck.length === 0) {
+    checkGameEnd();
+    return null;
   }
+  const randomIndex = Math.floor(Math.random() * deck.length);
+  const card = deck.splice(randomIndex, 1)[0]; // Remove card from the deck
+  return card;
 }
 
 // Function to handle the guess
@@ -88,7 +83,7 @@ function getRandomCard() {
   const suit = suits[Math.floor(Math.random() * suits.length)];
 
   const rank = ranks[Math.floor(Math.random() * ranks.length)];
-  
+
 }
 
 // Function to display the current card
