@@ -1,6 +1,8 @@
 const suits = ['♠', '♥', '♦', '♣'];
 
 const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+//Deck of availble cards
+let deck =[]
 
 // Set the score to zero
 let score = 0;
@@ -58,18 +60,26 @@ function getRandomCard() {
 
   let value;
 
-  if (rank === 'J') {
-    value = 11;
-  } else if (rank === 'Q') {
-    value =12;
-  }else if (rank === 'K') {
-    value =13;
-  }else if (rank === 'A') {
-    value =14;
-  }else {
-    value = parseInt(rank);
-  }
+  switch (rank) {
+    case 'J':
+      value =11;
+      break
+    case 'Q':
+      value =12;
+      break
+    case 'K':
+      value =13;
+      break
+    case 'A':
+      value =13;
+      break
+    default:
+      value = parseInt(rank); 
+      break;
+  } 
+
   
+ 
   return { suit: suit, rank: rank, value: value };
 }
 
