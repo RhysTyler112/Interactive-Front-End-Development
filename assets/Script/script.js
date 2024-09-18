@@ -62,14 +62,21 @@ function getRandomCard() {
 // Function to handle the guess
 function guess(choice){
     const nextCard = getRandomCard();
+    if(!nextCard) return;
 
     if ((choice === 'higher' && nextCard.value > currentCard.value) ||
         (choice === 'lower' && nextCard.value < currentCard.value)) {
         score++;
+        wrongGuesses = 0;
             messageDisplay.textContent = "Correct! The next card was " + formatCard(nextCard);
         }else {
             messageDisplay.textContent = "Wrong! The next card was " + formatCard(nextCard);
         }
+    if (wrongGuesses === 3) {
+      messageDisplay.textContent += " You lost! You guessed wrong 3 times in a row.";
+      disableButtons();
+      return;
+    }
 
     currentCard = nextCard
 
