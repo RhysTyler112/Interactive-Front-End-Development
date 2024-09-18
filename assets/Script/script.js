@@ -126,3 +126,9 @@ function disableButtons() {
   higherBtn.disabled = true;
   lowerBtn.disabled = true;
 }
+
+// Function to enable the higher/lower buttons
+function enableButtons() {
+  higherBtn.disabled = false;
+  lowerBtn.disabled = false;
+}
