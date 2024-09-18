@@ -87,15 +87,6 @@ function guess(choice){
     checkGameEnd()
 }
 
-// Function to get a random card
-function getRandomCard() {
-  
-  const suit = suits[Math.floor(Math.random() * suits.length)];
-
-  const rank = ranks[Math.floor(Math.random() * ranks.length)];
-
-}
-
 // Function to display the current card
 function displayCard(card) {
   cardDisplay.textContent = card.rank + card.suit;
@@ -114,11 +105,12 @@ function updateScore() {
 // Function to reset the game
 function resetGame() {
   score = 0;
-
+  wrongGuesses = 0;
+  cardsPlayed = 0;
+  initializeDeck();
   currentCard = getRandomCard();
-
   messageDisplay.textContent = "";
-
   displayCard(currentCard);
   updateScore();
+  enableButtons();
 } 
