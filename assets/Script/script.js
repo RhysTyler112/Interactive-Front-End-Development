@@ -9,6 +9,12 @@ let score = 0;
 // Start by picking a random card
 let currentCard = getRandomCard();
 
+// Number of consecutive wrong guesses
+let wrongGuesses = 0;
+
+// Track how many cards have been played
+let cardsPlayed = 0;
+
 // Select the HTML elements we want to update or interact with
 const cardDisplay = document.getElementById('current-card');
 const messageDisplay = document.getElementById('message');
@@ -114,3 +120,9 @@ function resetGame() {
   updateScore();
   enableButtons();
 } 
+
+// Function to disable the higher/lower buttons after game ends
+function disableButtons() {
+  higherBtn.disabled = true;
+  lowerBtn.disabled = true;
+}
