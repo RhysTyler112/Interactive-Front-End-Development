@@ -79,9 +79,12 @@ function guess(choice){
     }
 
     currentCard = nextCard
+    cardsPlayed++;
 
     displayCard(currentCard);
     updateScore();
+
+    checkGameEnd()
 }
 
 // Function to get a random card
