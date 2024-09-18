@@ -33,6 +33,17 @@ lowerBtn.addEventListener('click', function() {
 
 resetBtn.addEventListener('click', resetGame);
 
+// Initialize the deck with all possible cards
+function initializeDeck() {
+  deck = [];
+  for (let suit of suits) {
+    for (let rank of ranks) {
+      let value = getValue(rank);
+      deck.push({ suit: suit, rank: rank, value: value });
+    }
+  }
+}
+
 // Function to handle the guess
 function guess(choice){
     const nextCard = getRandomCard();
