@@ -1,12 +1,11 @@
 const suits = ['♠', '♥', '♦', '♣'];
 
 const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+
 //Deck of availble cards
 let deck =[]
-
 // Set the score to zero
 let score = 0;
-
 // Start by picking a random card
 let currentCard = getRandomCard();
 
@@ -18,10 +17,14 @@ const higherBtn = document.getElementById('btn-higher');
 const lowerBtn = document.getElementById('btn-lower'); 
 const resetBtn = document.getElementById('reset-btn');      
 
-// Display the current card at the start
+// Initialize the game
+initializeDeck();
+currentCard = getRandomCard();
 displayCard(currentCard);
+updateScore();
 
 // Add event listeners to the buttons depending if higher or lower button is clicked
+// When "Higher" is clicked, run the guess function with 'Higher'
 higherBtn.addEventListener('click', function() {
   guess('higher');
 });
@@ -31,9 +34,10 @@ lowerBtn.addEventListener('click', function() {
   guess('lower');
 });
 
+// When "New Gmae" is clicked, run the guess setGame
 resetBtn.addEventListener('click', resetGame);
 
-// Initialize the deck with all possible cards
+// Function to initialize the deck with all possible cards
 function initializeDeck() {
   deck = [];
   for (let suit of suits) {
@@ -119,4 +123,4 @@ function resetGame() {
 
   displayCard(currentCard);
   updateScore();
-}
+} 
