@@ -132,3 +132,14 @@ function enableButtons() {
   higherBtn.disabled = false;
   lowerBtn.disabled = false;
 }
+
+// Function to check if the game has ended (win or tie condition)
+function checkGameEnd(){
+  if(cardsPlayed === 52 && score === 52){
+    messageDisplay.textContent = "Congratulations! You won! You got all 52 cards correct!";
+    disableButtons();
+  }else if (cardsPlayed === 52 && score < 52) {
+    messageDisplay.textContent = "It's a tie! All cards have been shown, but your score is below 52.";
+    disableButtons();
+  }
+}
