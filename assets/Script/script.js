@@ -1,27 +1,20 @@
 const suits = ['♠', '♥', '♦', '♣'];
-
 const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
-//Deck of availble cards
-let deck =[]
-// Set the score to zero
-let score = 0;
-// Start by picking a random card
-let currentCard = getRandomCard();
 
-// Number of consecutive wrong guesses
-let wrongGuesses = 0;
-
-// Track how many cards have been played
-let cardsPlayed = 0;
+let deck = [];            // Deck of available cards
+let score = 0;            // Player score
+let currentCard = {};      // Current card being displayed
+let wrongGuesses = 0;      // Number of consecutive wrong guesses
+let cardsPlayed = 0;       // Track how many cards have been played
 
 // Select the HTML elements we want to update or interact with
 const cardDisplay = document.getElementById('current-card');
 const messageDisplay = document.getElementById('message');
 const scoreDisplay = document.getElementById('current-score');
-const higherBtn = document.getElementById('btn-higher');     
-const lowerBtn = document.getElementById('btn-lower'); 
-const resetBtn = document.getElementById('reset-btn');      
+const higherBtn = document.getElementById('btn-higher');
+const lowerBtn = document.getElementById('btn-lower');
+const resetBtn = document.getElementById('reset-btn');
 
 // Initialize the game
 initializeDeck();
@@ -29,18 +22,15 @@ currentCard = getRandomCard();
 displayCard(currentCard);
 updateScore();
 
-// Add event listeners to the buttons depending if higher or lower button is clicked
-// When "Higher" is clicked, run the guess function with 'Higher'
+// Add event listeners
 higherBtn.addEventListener('click', function() {
   guess('higher');
 });
 
-// When "Lower" is clicked, run the guess function with 'lower'
 lowerBtn.addEventListener('click', function() {
   guess('lower');
 });
 
-// When "New Gmae" is clicked, run the guess setGame
 resetBtn.addEventListener('click', resetGame);
 
 // Function to initialize the deck with all possible cards
@@ -51,6 +41,22 @@ function initializeDeck() {
       let value = getValue(rank);
       deck.push({ suit: suit, rank: rank, value: value });
     }
+  }
+}
+
+// Function to get the value of a card's rank
+function getValue(rank) {
+  switch (rank) {
+    case 'J':
+      return 11;
+    case 'Q':
+      return 12;
+    case 'K':
+      return 13;
+    case 'A':
+      return 14;
+    default:
+      return parseInt(rank);
   }
 }
 
@@ -66,36 +72,40 @@ function getRandomCard() {
 }
 
 // Function to handle the guess
-function guess(choice){
-    const nextCard = getRandomCard();
-    if(!nextCard) return;
+function guess(choice) {
+  const nextCard = getRandomCard();
+  if (!nextCard) return; // No more cards
 
-    if ((choice === 'higher' && nextCard.value > currentCard.value) ||
-        (choice === 'lower' && nextCard.value < currentCard.value)) {
-        score++;
-        wrongGuesses = 0;
-            messageDisplay.textContent = "Correct! The next card was " + formatCard(nextCard);
-        }else {
-            messageDisplay.textContent = "Wrong! The next card was " + formatCard(nextCard);
-        }
+  if ((choice === 'higher' && nextCard.value > currentCard.value) ||
+      (choice === 'lower' && nextCard.value < currentCard.value)) {
+    score++;
+    wrongGuesses = 0; // Reset wrong guesses counter
+    messageDisplay.textContent = "Correct! The next card was " + formatCard(nextCard);
+  } else {
+    wrongGuesses++;
+    messageDisplay.textContent = "Wrong! The next card was " + formatCard(nextCard);
     if (wrongGuesses === 3) {
       messageDisplay.textContent += " You lost! You guessed wrong 3 times in a row.";
       disableButtons();
       return;
     }
+  }
 
-    currentCard = nextCard
-    cardsPlayed++;
+  currentCard = nextCard;
+  cardsPlayed++;
 
-    displayCard(currentCard);
-    updateScore();
+  displayCard(currentCard);
+  updateScore();
 
-    checkGameEnd()
+  // Check for win or tie
+  checkGameEnd();
 }
 
 // Function to display the current card
 function displayCard(card) {
-  cardDisplay.textContent = card.rank + card.suit;
+  if (card) {
+    cardDisplay.textContent = card.rank + card.suit;
+  }
 }
 
 // Function to format the card for displaying in messages
@@ -105,7 +115,7 @@ function formatCard(card) {
 
 // Function to update the score display
 function updateScore() {
-  scoreDisplay.textContent = score;
+  scoreDisplay.textContent = "Score: " + score;
 }
 
 // Function to reset the game
@@ -119,7 +129,7 @@ function resetGame() {
   displayCard(currentCard);
   updateScore();
   enableButtons();
-} 
+}
 
 // Function to disable the higher/lower buttons after game ends
 function disableButtons() {
@@ -134,11 +144,11 @@ function enableButtons() {
 }
 
 // Function to check if the game has ended (win or tie condition)
-function checkGameEnd(){
-  if(cardsPlayed === 52 && score === 52){
+function checkGameEnd() {
+  if (cardsPlayed === 52 && score === 52) {
     messageDisplay.textContent = "Congratulations! You won! You got all 52 cards correct!";
     disableButtons();
-  }else if (cardsPlayed === 52 && score < 52) {
+  } else if (cardsPlayed === 52 && score < 52) {
     messageDisplay.textContent = "It's a tie! All cards have been shown, but your score is below 52.";
     disableButtons();
   }
