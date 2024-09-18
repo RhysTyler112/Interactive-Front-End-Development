@@ -5,7 +5,7 @@ Higher and Lower is a game card game where the player has to choose card after t
 
 ![Am I Responsive](assets/README/am-i-responisve.png)
 
-[View Build n Blend live project here](https://rhystyler112.github.io/Interactive-Front-End-Development///)
+[View Higher or Lower here](https://rhystyler112.github.io/Interactive-Front-End-Development///)
 
 ## Table of Contents
 
