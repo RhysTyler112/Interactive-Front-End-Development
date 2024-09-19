@@ -36,17 +36,15 @@ Higher and Lower is a game card game where the player has to choose card after t
 ### User Stories
 
  * First-time visitor goals
-    * 
-    * 
-    * 
+    * Understanding the rules so they are able to play the game.
+    * Easily navigate in which buttons choose higher or lower and create a new game. 
+    * Know where to see their current higher score.
  * Returning visitor goals
-    * 
-    * 
-    * 
+    * Able to play without looking at the rules
+    * Experince all of the end game like win, lose, tie
 
  * Frequent user goals
-    * 
-    * 
+    * Compete with themselves to beat thier highscore or the top score of 52.
 
 - - -
 
@@ -66,7 +64,7 @@ Higher and Lower is a game card game where the player has to choose card after t
     <summary>Mobile
     </summary>
 
-    ![Mobile Wireframe](assests/README/moblie-wireframe.png
+    ![Mobile Wireframe](assests/README/moblie-wireframe.png)
 
     </details>
     <details>
@@ -92,53 +90,56 @@ Higher and Lower is a game card game where the player has to choose card after t
 ### Existing Features
 
 * Navigation bar
-    * 
-    *
+    * It is featured and fixed on on the page
+    * Includes main title of the site and the new game button
 
-![Navigation](assests/README/nav-bar.png)
+![Navigation](assets/readme/nav-bar.png)
 
-* Hero Image
-    * 
-
-![Hero Image](assests/README/hero-image.png)
-
-* Section one, 'New Gane'
-    * 
+* Section one, 'New Game'
+    * Allows the player to start a new game and reset all scores and cards used back to 0.
+    * This could happen after a win, lose or tie.
 
 
-![New Game](assests/README/)
+![New Game](assets/readme/new-game.png)
 
 * Section two, 'How to Play?'
-   * 
+   * This is a button with lunches a modal box with the rules
+   * Can be closed and hidden away so it doesn't take up screen space and distract the user.
+   * Displays all the facts and knowledge a user will need to play the game
 
 
-![How to Play?](assests/README/)
+![How to Play button](assets/readme/how-to-play.png)
+![How to Play text](assets/readme/how-to-play-2.png)
 
 * The Card
-    * 
+    * Depslays the current card number and suit so the user can make thier guess.
 
 
-![The Card](assests/README/)
+![The Card](assets/readme/the-card.png)
 
 * Message
-    * 
+    * This informs the user the outcome of their action
+    * Correct message
+    * Incorrect message and what the next card is
+    * If incorrect how many attpemts they have left
+    * When they have won or lost
 
 
-![Message](assests/README/)
+![Message](assets/readme/the-message.png)
 
 * The Score
-    * 
+    *  Shows the user their current score of correct guess they have made
+    *  Max can be 52 due to 52 cards in a deck
 
 
-![The Score](assests/README/)
+![The Score](assets/readme/the-score.png)
 
 ---
 
 ## Features Left to Implement
 
-* 
-* 
-* 
+* Create and Interative High Score
+* Multiply the mumber of card by having more than 1 deck avaviable
 
 ---
 
