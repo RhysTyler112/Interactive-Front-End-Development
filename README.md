@@ -172,6 +172,21 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
  * [W3C Markup Validator](https://validator.w3.org/)
  * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
+### Validation results
+
+<details>
+<summary>index.html
+</summary>
+
+![Index page validation result](assets/readme/html-validator.png)
+</details>
+
+<details>
+<summary>style.css
+</summary>
+
+![CSS validation result](assets/readme/css-validator.png)
+</details>
 ---
 
 ## Deployment and local development
