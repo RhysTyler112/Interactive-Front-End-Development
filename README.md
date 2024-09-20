@@ -167,7 +167,10 @@ Higher and Lower is a game card game where the player has to choose card after t
 
 ## Testing
 
+The W3C Markup Validator and W3C CSS Validator services were used to validate every 
 
+ * [W3C Markup Validator](https://validator.w3.org/)
+ * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
 ---
 
@@ -206,7 +209,7 @@ By forking the repository, we make a copy of the original repository on our GitH
 ## Credits
 
 ### Code
- * [w3schools](https://www.w3schools.com/) CSS section gave inspiration to the design of the website.
+ * [w3schools](https://www.w3schools.com/) was used for inspiration to the design of the website and the tips on my script code.
  * The README template was helpfully provided by [Code Institute (template)](https://github.com/Code-Institute-Solutions/SampleREADME)
  * To help make sure I was committing and pushing my work correctly using [Git Cheat Code](https://education.github.com/git-cheat-sheet-education.pdf)
 
@@ -217,8 +220,7 @@ By forking the repository, we make a copy of the original repository on our GitH
 
 ### Media 
 
- * [Unsplash](https://unsplash.com/) free stock photos, royalty free images.
- * [Imageresizer](https://imageresizer.com//) Resizing images.
+ * No external images were needed in this project
 ---
 
 ## Acknowledgements
