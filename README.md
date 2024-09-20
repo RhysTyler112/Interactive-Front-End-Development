@@ -3,7 +3,7 @@ Higher to Lower
 Higher and Lower is a game card game where the player has to choose card after the current card dispalyed will be higher or lower. This is achived by using javascript.
 
 
-![Am I Responsive](assets/README/am-i-responisve.png)
+![Am I Responsive](assets/readme/am-i-responisve.png)
 
 [View Higher or Lower here](https://rhystyler112.github.io/Interactive-Front-End-Development///)
 
@@ -188,6 +188,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 ![CSS validation result](assets/readme/css-validator.png)
 </details>
 ---
+
 ### Manual Testing
 
 * The website was tested on Google Chrome, Microsoft Edge, and Opera browsers.
@@ -206,6 +207,23 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 * Bug: Is that the same card can be displayed more than once meaning there would be more than 52 card displayed deafting the object of the game. -Fix: A empty array was made to add the cards that had shown so math.random would not choice it again and function checkGameEnd() if 52 cards had been shown the correct win codtion would be displayed to the user. 
 *   No known bugs
 
+### Lighthouse Report
+
+#### Mobile analysis
+<details>
+<summary>Main page
+</summary>
+
+![Index Page lighthouse report](assets/readme/lighthouse-mobile.png)
+
+#### Desktop analysis
+<details>
+<summary>Main page
+</summary>
+
+![Index Page lighthouse report](assets/readme/lighthouse-desktop.png)
+
+---
 
 ## Deployment and local development
 
