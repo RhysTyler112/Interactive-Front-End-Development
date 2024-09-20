@@ -1,6 +1,6 @@
 Higher to Lower
 
-Higher and Lower is a game card game where the player has to choose card after the current card dispalyed will be higher or lower. This is achived by using javascript.
+Higher and Lower is a card game where the player has to choose a card after the current card displayed will be higher or lower. This is achieved by using javascript.
 
 
 ![Am I Responsive](assets/readme/am-i-responisve.png)
@@ -41,10 +41,10 @@ Higher and Lower is a game card game where the player has to choose card after t
     * Know where to see their current higher score.
  * Returning visitor goals
     * Able to play without looking at the rules
-    * Experince all of the end game like win, lose, tie
+    * Experience all of the end game like win, lose, tie
 
  * Frequent user goals
-    * Compete with themselves to beat thier highscore or the top score of 52.
+    * Compete with themselves to beat the highscore or the top score of 52.
 
 - - -
 
@@ -64,21 +64,21 @@ Higher and Lower is a game card game where the player has to choose card after t
     <summary>Mobile
     </summary>
 
-    ![Mobile Wireframe](assests/README/moblie-wireframe.png)
+    ![Mobile Wireframe](assets/README/moblie-wireframe.png)
 
     </details>
     <details>
     <summary>Tablet
     </summary>
 
-    ![Tablet Wireframe](/assests/README/tablet-wireframe.png)
+    ![Tablet Wireframe](/assets/README/tablet-wireframe.png)
 
     </details>
     <details>
     <summary>Desktop
     </summary>
 
-    ![Desktop Wireframe](/assests/README/desktop-wireframe.png)
+    ![Desktop Wireframe](/assets/README/desktop-wireframe.png)
 ---
 
 ## Features
@@ -88,7 +88,7 @@ Higher and Lower is a game card game where the player has to choose card after t
 * Simple UI: Clean layout with interactive buttons to make higher or lower guesses.
 * Rules Display: Clear explanation of how to play the game.
 * Game Reset: Option to start a new game after a loss or completion.
-* Message to display if guess was correct and win condtion that was activated.
+* Message to display if guess was correct and win condition that was activated.
 
 ### Existing Features
 
@@ -115,7 +115,7 @@ Higher and Lower is a game card game where the player has to choose card after t
 ![How to Play text](assets/readme/how-to-play-2.png)
 
 * The Card
-    * Depslays the current card number and suit so the user can make thier guess.
+    * Displays the current card number and suit so the user can make their guess.
 
 
 ![The Card](assets/readme/the-card.png)
@@ -124,7 +124,7 @@ Higher and Lower is a game card game where the player has to choose card after t
     * This informs the user the outcome of their action
     * Correct message
     * Incorrect message and what the next card is
-    * If incorrect how many attpemts they have left
+    * If incorrect how many attempts they have left
     * When they have won or lost
 
 
@@ -141,8 +141,8 @@ Higher and Lower is a game card game where the player has to choose card after t
 
 ## Features Left to Implement
 
-* Create and Interative High Score
-* Multiply the number of card by having more than 1 deck avaviable
+* Create and Interactive High Score
+* Multiply the number of card by having more than 1 deck available
 
 ---
 
@@ -160,7 +160,7 @@ Higher and Lower is a game card game where the player has to choose card after t
  * [Gitpod](https://www.gitpod.io/)
     * To write the code.
  * [Git](https://git-scm.com/)
-    * for vesion control.
+    * for version control.
  * [Github](https://github.com/)
     * Deployment of the website and storing the files online.
 * [Am I Responsive](https://ui.dev/amiresponsive)
@@ -201,13 +201,13 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 
 ### Bugs and Fixes
 
-*  Bug: There's was no handling for when the current card and the next card are of the same rank. This could be confusing for players.-Fix: Add an explicit check for when the cards are tied and provide feedback to the player.
+*  Bug: There was no handling for when the current card and the next card are of the same rank. This could be confusing for players.-Fix: Add an explicit check for when the cards are tied and provide feedback to the player.
 
-*   Bug: After the last card is drawn, there was no clear message or prompt for the player when the game is over. Instead, it only checks whether all cards have been played, but doesn't make the outcome clear enough for the player. -Fix: Add more robust game-ending feedback for both winning and losing conditions.
+*   Bug: After the last card is drawn, there is no clear message or prompt for the player when the game is over. Instead, it only checks whether all cards have been played, but doesn't make the outcome clear enough for the player. -Fix: Add more robust game-ending feedback for both winning and losing conditions.
 
 *   Bug: After the game ends (when the player wins or loses), the higher and lower buttons are disabled. However, if the player keeps pressing these buttons rapidly right before they are disabled, there could be additional unwanted guesses being processed. -Fix: Add a check at the beginning of the guess() function to prevent further guesses once the game is over. 
 
-* Bug: Is that the same card can be displayed more than once meaning there would be more than 52 card displayed deafting the object of the game. -Fix: A empty array was made to add the cards that had shown so math.random would not choice it again and function checkGameEnd() if 52 cards had been shown the correct win codtion would be displayed to the user. 
+* Bug: Is that the same card can be displayed more than once meaning there would be more than 52 cards displayed defeating the object of the game. -Fix: An empty array was made to add the cards that had shown so math.random would not choice it again and function checkGameEnd() if 52 cards had been shown the correct win condition would be displayed to the user. 
 *   No known bugs
 
 ### Lighthouse Report
@@ -280,5 +280,5 @@ By forking the repository, we make a copy of the original repository on our GitH
 
 ## Acknowledgements
 
- * My mentor Mitko Bachvarov provided helpful feedback and a link to the Flexbox guide.
+ * My mentor Mitko Bachvarov provided helpful feedback
  * Slack community for encouragement and information.
