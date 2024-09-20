@@ -188,6 +188,24 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 ![CSS validation result](assets/readme/css-validator.png)
 </details>
 ---
+### Manual Testing
+
+* The website was tested on Google Chrome, Microsoft Edge, and Opera browsers.
+* The website was viewed on a desktop computer, tablet, and iphone 13.
+* Family and friends were asked to review the website for a better understanding of the user experience.
+* Dev Tools was used to test how the site looks on various screen sizes.
+
+### Bugs and Fixes
+
+*  Bug: There's was no handling for when the current card and the next card are of the same rank. This could be confusing for players.-Fix: Add an explicit check for when the cards are tied and provide feedback to the player.
+
+*   Bug: After the last card is drawn, there was no clear message or prompt for the player when the game is over. Instead, it only checks whether all cards have been played, but doesn't make the outcome clear enough for the player. -Fix: Add more robust game-ending feedback for both winning and losing conditions.
+
+*   Bug: After the game ends (when the player wins or loses), the higher and lower buttons are disabled. However, if the player keeps pressing these buttons rapidly right before they are disabled, there could be additional unwanted guesses being processed. -Fix: Add a check at the beginning of the guess() function to prevent further guesses once the game is over. 
+
+* Bug: Is that the same card can be displayed more than once meaning there would be more than 52 card displayed deafting the object of the game. -Fix: A empty array was made to add the cards that had shown so math.random would not choice it again and function checkGameEnd() if 52 cards had been shown the correct win codtion would be displayed to the user. 
+*   No known bugs
+
 
 ## Deployment and local development
 
