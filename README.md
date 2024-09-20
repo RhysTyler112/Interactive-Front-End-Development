@@ -218,6 +218,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 </summary>
 
 ![Index Page lighthouse report](assets/readme/lighthouse-mobile.png)
+</details>
 
 #### Desktop analysis
 <details>
@@ -225,7 +226,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 </summary>
 
 ![Index Page lighthouse report](assets/readme/lighthouse-desktop.png)
-
+</details>
 ---
 
 ## Deployment and local development
