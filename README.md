@@ -83,9 +83,12 @@ Higher and Lower is a game card game where the player has to choose card after t
 
 ## Features
 
-* 
-* 
-* 
+* Higher or Lower Game: Players guess if the next card will be higher or lower in value than the current card.
+* Score Tracking: Player's score is updated based on correct or incorrect guesses.
+* Simple UI: Clean layout with interactive buttons to make higher or lower guesses.
+* Rules Display: Clear explanation of how to play the game.
+* Game Reset: Option to start a new game after a loss or completion.
+* Message to display if guess was correct and win condtion that was activated.
 
 ### Existing Features
 
