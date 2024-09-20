@@ -51,10 +51,10 @@ Higher and Lower is a game card game where the player has to choose card after t
 ## Design
 
  * Colour Scheme
-    * Primary colours used on the website: ![Color Scheme](assests/README/colors-used.png)
+    * Primary colours used on the website: ![Color Scheme](assets/readme/colour-scheme.png)
 
  * Typography
-    * 
+    * Normal fonts was used during this project as not special fonts were needed
 
  * Wireframes
     * 
@@ -139,7 +139,7 @@ Higher and Lower is a game card game where the player has to choose card after t
 ## Features Left to Implement
 
 * Create and Interative High Score
-* Multiply the mumber of card by having more than 1 deck avaviable
+* Multiply the number of card by having more than 1 deck avaviable
 
 ---
 
