@@ -207,7 +207,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 
 *   Bug: After the game ends (when the player wins or loses), the higher and lower buttons are disabled. However, if the player keeps pressing these buttons rapidly right before they are disabled, there could be additional unwanted guesses being processed. -Fix: Add a check at the beginning of the guess() function to prevent further guesses once the game is over. 
 
-* Bug: Is that the same card can be displayed more than once meaning there would be more than 52 cards displayed defeating the object of the game. -Fix: An empty array was made to add the cards that had shown so math.random would not choice it again and function checkGameEnd() if 52 cards had been shown the correct win condition would be displayed to the user. 
+* Bug: Is that the same card can be displayed more than once meaning there would be more than 52 cards displayed defeating the object of the game. -Fix: An empty array was made to add the cards that have been shown so math.random would not choose them again and function checkGameEnd() if 52 cards had been shown then the correct win condition would be displayed to the user. 
 *   No known bugs
 
 ### Lighthouse Report
