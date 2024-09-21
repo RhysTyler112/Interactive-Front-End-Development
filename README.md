@@ -234,7 +234,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 ### GitHub Pages
 
 GitHub Pages used to deploy live version of the website.
-1. Log in to GitHub and locate [GitHub Repository Interactive-Front-End-Development](https://github.com/RhysTyler112/Interactive-Front-End-Development/settings/pages)
+1. Log in to GitHub and locate [GitHub Repository Interactive-Front-End-Development](https://github.com/RhysTyler112/Interactive-Front-End-Development)
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
 3. Scroll down the Settings page until you locate "GitHub Pages".
 4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
@@ -245,7 +245,7 @@ GitHub Pages used to deploy live version of the website.
 
 By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
 
-1. Log in to GitHub and locate [GitHub Repository Interactive-Front-End-Development](https://github.com/RhysTyler112/Interactive-Front-End-Development/settings/pages)
+1. Log in to GitHub and locate [GitHub Repository Interactive-Front-End-Development](https://github.com/RhysTyler112/Interactive-Front-End-Development)
 2. At the top of the Repository(under the main navigation) locate "Fork" button.
 3. Now you should have a copy of the original repository in your GitHub account.
 
