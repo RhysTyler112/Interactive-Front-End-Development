@@ -129,10 +129,18 @@ Higher and Lower is a card game where the player has to choose a card after the 
 
 
 ![Message](assets/readme/the-message.png)
+![Message](assets/readme/incorrect-guess.png)
 
 * The Score
     *  Shows the user their current score of correct guess they have made
     *  Max can be 52 due to 52 cards in a deck
+
+
+![The Score](assets/readme/the-score.png)
+
+* Win Condition
+    *  Depend on the outcome of the user results a win condtion message will be displayed.
+    *  This will be a win, lose or tie message
 
 
 ![The Score](assets/readme/the-score.png)
@@ -194,10 +202,25 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 
 ### Manual Testing
 
-* The website was tested on Google Chrome, Microsoft Edge, and Opera browsers.
-* The website was viewed on a desktop computer, tablet, and iphone 13.
-* Family and friends were asked to review the website for a better understanding of the user experience.
-* Dev Tools was used to test how the site looks on various screen sizes.
+# Manual Testing Table
+
+| **What is to happen**                                             | **Expected**                                                                 | **Result**                                   |
+|-------------------------------------------------------------------|-------------------------------------------------------------------------------|----------------------------------------------|
+| Game initializes and displays the first card.                     | A random card from the deck is displayed. Score is 0. Buttons are enabled.    | Pass   |
+| Player clicks "Higher" and the next card is higher than the current one. | Score increases by 1, message says "Correct!", new card is displayed.         | Pass   |
+| Player clicks "Lower" and the next card is lower than the current one.  | Score increases by 1, message says "Correct!", new card is displayed.         | Pass   |
+| Player clicks "Higher" but the next card is lower.                | Wrong guess counter increases by 1, message says "Wrong!", new card displayed.| Pass   |
+| Player makes 3 consecutive wrong guesses.                         | Message says "You lost! You guessed wrong 3 times in a row.", buttons disabled.| Pass   |
+| Player plays until all 52 cards are dealt and wins with a perfect score. | Message says "Congratulations! You won with a perfect score!", buttons disabled.| Pass   |
+| Player plays until all 52 cards are dealt without perfect score.  | Message says "Game over! Your final score is X.", buttons disabled.           | Pass   |
+| Player clicks "Reset" after a loss or game end.                   | Game resets, score is 0, random card displayed, message cleared, buttons enabled. | Pass   |
+| Deck runs out of cards (52 cards played).                         | Game ends, score is displayed, buttons disabled.                              | Pass   |
+| Player click on how to play button.                      | Modal appears with the rules of the game.                         | Pass   |
+| Player click close button to close the how to play.                      | Modal dissapears so the player can start the game                        | Pass   |
+| Ensure the same card rank doesn't appear twice in a row.          | Cards are displayed in random order, but never repeat the same rank twice consecutively. | Pass   |
+| Ensure no duplicate cards are drawn during gameplay.              | Every card drawn should be unique and not repeat in the deck during a session. | Pass   |
+| Game ensures score display updates after every guess.             | Score increments immediately after a correct guess and shows in the score display. | Pass   |
+
 
 ### Bugs and Fixes
 
