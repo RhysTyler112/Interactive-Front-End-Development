@@ -64,21 +64,21 @@ Higher and Lower is a card game where the player has to choose a card after the 
     <summary>Mobile
     </summary>
 
-    ![Mobile Wireframe](assets/README/moblie-wireframe.png)
+    ![Mobile Wireframe](assets/readme/wireframe-mobile.png)
 
     </details>
     <details>
     <summary>Tablet
     </summary>
 
-    ![Tablet Wireframe](/assets/README/tablet-wireframe.png)
+    ![Tablet Wireframe](assets/readme/wireframe-tablet.png)
 
     </details>
     <details>
     <summary>Desktop
     </summary>
 
-    ![Desktop Wireframe](/assets/README/desktop-wireframe.png)
+    ![Desktop Wireframe](assets/readme/wireframe-desktop.png)
 ---
 
 ## Features
