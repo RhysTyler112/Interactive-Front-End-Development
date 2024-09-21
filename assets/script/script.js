@@ -90,7 +90,7 @@ function guess(choice) {
     messageDisplay.textContent = "Wrong! The next card was " + formatCard(nextCard);
     if (wrongGuesses === 3) {
       messageDisplay.textContent += " You lost! You guessed wrong 3 times in a row.";
-      disableButtons();
+      toggleButtons(false);
       return;
     }
   }
@@ -132,19 +132,13 @@ function resetGame() {
   messageDisplay.textContent = "";
   displayCard(currentCard);
   updateScore();
-  enableButtons();
+  toggleButtons(true);
 }
 
 // Function to disable the higher/lower buttons after game ends
-function disableButtons() {
-  higherBtn.disabled = true;
-  lowerBtn.disabled = true;
-}
-
-// Function to enable the higher/lower buttons
-function enableButtons() {
-  higherBtn.disabled = false;
-  lowerBtn.disabled = false;
+function toggleButtons(enable) {
+  higherBtn.disabled = !enable;
+  lowerBtn.disabled = !enable;
 }
 
 // Function to check if the game has ended (win or tie condition)
@@ -155,6 +149,6 @@ function checkGameEnd() {
     } else {
       messageDisplay.textContent = `Game over! Your final score is ${score}.`;
     }
-    disableButtons();
+    toggleButtons(false);
   }
 }
