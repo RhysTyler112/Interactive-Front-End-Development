@@ -139,11 +139,13 @@ Higher and Lower is a card game where the player has to choose a card after the 
 ![The Score](assets/readme/the-score.png)
 
 * Win Condition
-    *  Depend on the outcome of the user results a win condtion message will be displayed.
+    *  Depend on the outcome of the user results a endgame condtion message will be displayed.
     *  This will be a win, lose or tie message
 
 
-![The Score](assets/readme/the-score.png)
+![The Score](assets/readme/win-condtion.png)
+![The Score](assets/readme/lose-condition.png)
+![The Score](assets/readme/tie-condtion.png)
 
 ---
 
