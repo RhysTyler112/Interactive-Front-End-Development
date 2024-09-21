@@ -201,14 +201,14 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 
 ### Bugs and Fixes
 
-*  Bug: There was no handling for when the current card and the next card are of the same rank. This could be confusing for players.-Fix: Add an explicit check for when the cards are tied and provide feedback to the player.
+| Bug                                                                                     | Fix                                                                                                               |
+| :-------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------: |
+| There was no handling for when the current card and the next card are of the same rank. This could be confusing for players. | Add an explicit check for when the cards are tied and provide feedback to the player.                        |
+| After the last card is drawn, there is no clear message or prompt for the player when the game is over. Instead, it only checks whether all cards have been played, but doesn't make the outcome clear enough for the player. | Add more robust game-ending feedback for both winning and losing conditions.                                       |
+| After the game ends (when the player wins or loses), the higher and lower buttons are disabled. However, if the player keeps pressing these buttons rapidly right before they are disabled, there could be additional unwanted guesses being processed. | Add a check at the beginning of the `guess()` function to prevent further guesses once the game is over.           |
+| The same card can be displayed more than once, meaning there would be more than 52 cards displayed, defeating the object of the game. | Ensure each card is removed from the deck once displayed, preventing duplicates.                                  |
+| No further bugs known                                                                  | N/A                                                                                                               |
 
-*   Bug: After the last card is drawn, there is no clear message or prompt for the player when the game is over. Instead, it only checks whether all cards have been played, but doesn't make the outcome clear enough for the player. -Fix: Add more robust game-ending feedback for both winning and losing conditions.
-
-*   Bug: After the game ends (when the player wins or loses), the higher and lower buttons are disabled. However, if the player keeps pressing these buttons rapidly right before they are disabled, there could be additional unwanted guesses being processed. -Fix: Add a check at the beginning of the guess() function to prevent further guesses once the game is over. 
-
-* Bug: Is that the same card can be displayed more than once meaning there would be more than 52 cards displayed defeating the object of the game. -Fix: An empty array was made to add the cards that have been shown so math.random would not choose them again and function checkGameEnd() if 52 cards had been shown then the correct win condition would be displayed to the user. 
-*   No known bugs
 
 ### Lighthouse Report
 
