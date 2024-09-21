@@ -1,7 +1,6 @@
 const suits = ['♠', '♥', '♦', '♣'];
 const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
-
 let deck = [];            // Deck of available cards
 let score = 0;            // Player score
 let currentCard = {};      // Current card being displayed
@@ -47,16 +46,11 @@ function initializeDeck() {
 // Function to get the value of a card's rank
 function getValue(rank) {
   switch (rank) {
-    case 'J':
-      return 11;
-    case 'Q':
-      return 12;
-    case 'K':
-      return 13;
-    case 'A':
-      return 14;
-    default:
-      return parseInt(rank);
+    case 'J': return 11;
+    case 'Q': return 12;
+    case 'K': return 13;
+    case 'A': return 14;
+    default: return parseInt(rank);
   }
 }
 
@@ -72,7 +66,7 @@ function getRandomCard() {
     nextCard = deck[randomIndex];
   } while (nextCard.rank === currentCard.rank); // Ensure the rank is different
 
-  return deck.splice(deck.indexOf(nextCard), 1)[0]; // Remove and return card
+  return deck.splice(deck.indexOf(nextCard), 1)[0]; // Remove and return the card
 }
 
 // Function to handle the guess
@@ -119,7 +113,7 @@ function formatCard(card) {
 
 // Function to update the score display
 function updateScore() {
-  scoreDisplay.textContent =  score;
+  scoreDisplay.textContent = score;
 }
 
 // Function to reset the game
@@ -135,7 +129,7 @@ function resetGame() {
   toggleButtons(true);
 }
 
-// Function to disable the higher/lower buttons after game ends
+// Function to disable the higher/lower buttons after the game ends
 function toggleButtons(enable) {
   higherBtn.disabled = !enable;
   lowerBtn.disabled = !enable;
