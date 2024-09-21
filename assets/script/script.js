@@ -66,9 +66,14 @@ function getRandomCard() {
     checkGameEnd();
     return null;
   }
-  const randomIndex = Math.floor(Math.random() * deck.length);
-  const card = deck.splice(randomIndex, 1)[0]; // Remove card from the deck
-  return card;
+  let nextCard;
+  do {
+    const randomIndex = Math.floor(Math.random() * deck.length);
+    nextCard = deck[randomIndex];
+  } while (nextCard.rank === currentCard.rank); // Ensure the rank is different
+
+  return deck.splice(deck.indexOf(nextCard), 1)[0]; // Remove and return card
+  console.log(getRandomCard)
 }
 
 // Function to handle the guess
@@ -89,6 +94,7 @@ function guess(choice) {
       disableButtons();
       return;
     }
+    console.log(guess)
   }
 
   currentCard = nextCard;
@@ -96,9 +102,6 @@ function guess(choice) {
 
   displayCard(currentCard);
   updateScore();
-
-  // Check for win or tie
-  checkGameEnd();
 }
 
 // Function to display the current card
@@ -145,11 +148,10 @@ function enableButtons() {
 
 // Function to check if the game has ended (win or tie condition)
 function checkGameEnd() {
-  if (cardsPlayed === 52 && score === 52) {
+  if (score === 52) {
     messageDisplay.textContent = "Congratulations! You won! You got all 52 cards correct!";
-    disableButtons();
-  } else if (cardsPlayed === 52 && score < 52) {
+  } else if (score < 52) {
     messageDisplay.textContent = "It's a tie! All cards have been shown, but your score is below 52.";
-    disableButtons();
   }
+  disableButtons();
 }
